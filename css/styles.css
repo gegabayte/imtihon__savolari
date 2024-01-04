@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.section {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  margin: 100px auto;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 50px auto;
+  position: relative;
+}
+
+#tanla {
+  appearance: none;
+  background-color: lightgray;
+  border-radius: 20px;
+  width: 40px;
+  height: 20px;
+  cursor: pointer;
+  margin-left: 450px;
+  position: relative;
+}
+
+#tanla::before {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  content: "";
+  width: 16px;
+  height: 16px;
+  top: 2px;
+  left: 2px;
+  transition: all 0.5s;
+}
+
+#tanla:checked {
+  background-color: aqua;
+}
+
+#tanla:checked::before {
+  left: 23px;
+}
+
+#bosh {
+  width: 500px;
+  color: black;
+  font-size: 20px;
+  padding-left: 10px;
+  height: 24px;
+  cursor: pointer;
+  background-image: linear-gradient(to top #666, #eee);
+  border: 1px solid grey;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  box-shadow: 3px 3px 5px #333;
+}
+
+#tanla {
+  position: absolute;
+  top: 3px;
+  left: 8px;
+}
+
+#mavzu {
+  margin: 0 auto;
+  position: absolute;
+  float: left;
+  top: -20px;
+  left: 12px;
+  font-size: 50px;
+  font-weight: bolder;
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+
+#tanla:checked + div {
+  width: 500px;
+  height: 950px;
+  animation: ochil 0.7s ease-out;
+}
+
+#tanla:not(:checked) + div {
+  height: 0;
+  animation: yopil 0.7s ease-out;
+}
+
+#oyna {
+  padding: 0px 30px;
+  width: 500px;
+  margin-top: 0px;
+  border: 1px solid grey;
+  height: 500px;
+  background-image: repeating-linear-gradient(circle at center, #999, #eee, 300px);
+  box-shadow: 3px 3px 5px #333, inset 1px 2px 1px #333;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  overflow: hidden;
+}
+#oyna h4 {
+  font-size: 16px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+#oyna h4:hover {
+  padding: 6px;
+  transform: scale(1.1);
+  background: black;
+  color: white;
+}
+
+@keyframes ochil {
+  from {
+    height: 0;
+  }
+  to {
+    height: 950px;
+  }
+}
+@keyframes yopil {
+  from {
+    height: 950px;
+  }
+  to {
+    height: 0;
+  }
+}/*# sourceMappingURL=styles.css.map */
