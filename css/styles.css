@@ -2,10 +2,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 body {
   font-family: sans-serif;
+}
+
+::selection {
+  background: rgb(110, 110, 119);
+  color: aliceblue;
 }
 
 .section {
@@ -90,6 +96,7 @@ body {
 #tanla:checked + div {
   width: 500px;
   height: 950px;
+  overflow: auto;
   animation: ochil 0.7s ease-out;
 }
 
